@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+
+<body onload="question()"> 
+     <!--onload = question() whenever page refreshes this function will get called -->
+
+
+    <div class="mainBody">
+        <div class="mainContent">
+            <div class="header">
+                <section>
+                    <div>
+                        <span>Name :</span>
+                        <span id="userName"></span>
+                    </div>
+                    <div>
+                        <span>Email:</span>
+                        <span id="userEmail"></span>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <span>Timer : </span>
+                        <span>00:00</span>
+                    </div>
+                </section>
+            </div>
+            <div class="bodyContent">
+                <div id="htmlQ">
+                    <h3>What is this?</h3>
+
+                </div>
+                <div id="htmlAnswer">
+                    <ol id="options">
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                        <li>d</li>
+                    </ol>
+                </div>
+
+
+
+            </div>
+            <div class="footer">
+<div>
+    <span>1</span>
+    <span>/</span>
+    <span>8</span>
+</div>
+<div>
+    <button onclick = "question()">Next Question</button>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="quiz.js"></script>
+
+</html>

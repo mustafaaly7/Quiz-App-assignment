@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mainBody{
+    height: 100vh;
+    background: #00416A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFE000, #799F0C, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFE000, #799F0C, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.enter{
+width: 80%;
+margin: 0 auto;
+/* border: 1px solid red; */
+text-align: center;
+padding: 100px 0px 0px 0px;
+}
+.enter h1{
+    color: white;
+    font-size: 50px;
+    /* color: rgb(145, 14, 14); */
+}
+.enter input{
+    background-color: #00416A;
+    height: 8vh;
+    width: 50%;
+    font-size: 20px;
+    color: white;
+}
+.enter input::placeholder{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.enter button{
+    background-color: #00416A;
+    height: 6vh;
+    font-size: 20px;
+    color: white;
+    width: 20%;
+}
+.hidden{
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+
+#startQuiz{
+
+    width: 80%;
+margin: 0 auto;
+/* border: 1px solid red; */
+text-align: center;
+
+}
+#startQuiz button{
+    background-color: #00416A;
+    height: 12vh;
+    font-size: 20px;
+    color: white;
+    /* width: 20%; */
+
+}
+
+.mainContent{
+    /* border: 1px solid white; */
+    width: 80%;
+    height: 8vh;
+    margin: 0px auto;
+}
+
+.header{
+    border: 1px solid red;
+    display: flex; 
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+    color: whitesmoke;
+}
+.bodyContent{
+    /* border: 1px solid blue; */
+    font-size: 2em;
+    color: whitesmoke;
+}
+#htmlAnswer{
+    /* font-size: 2em; */
+}
+#htmlAnswer ol{
+    /* list-style: circle; */
+/* list-style-position: outside; */
+list-style-type: disc;
+/* font-size: 2em; */
+}
+
+
+.footer{
+    font-size: 2em;
+    border: 1px solid green;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.footer div button{
+    background-color: #00416A;
+    height: 7vh;
+    font-size: 20px;
+    color: white;
+}
+
+
