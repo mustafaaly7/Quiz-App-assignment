@@ -27,75 +27,75 @@ var questions =[
     },
     {
         id : 3,
-        question :"Choose the correct HTML element for the largest heading:",
+        question :"What is the difference between XML and HTML?",
         answer: {
-            a:"<heading>",
-            b:"<head>",
-            c:"<h1>",
-            d:"<h6>"
+            a:"HTML is used for exchanging data, XML is not.",
+            b:"XML is used for exchanging data, HTML is not",
+            c:"HTML can have user defined tags, XML cannot",
+            d:"None"
 
         },
         result:"<h1>"
     },
     {
         id : 4,
-        question :"what is the correct HTML element for inserting a line break",
+        question :"Opening Tag of HTML Tag is called as ________.",
         answer: {
-            a:"<br>",
-            b:"<break>",
-            c:"<lb>",
-            d:"none"
+            a:"Closed Tag",
+            b:"Starting Tag",
+            c:"Forward Tag",
+            d:"Enging Tag"
 
         },
-        result:"<br>"
+        result:"Starting Tag"
     },
     {
         id : 5,
-        question : "What is the correct HTML for adding a background color?",
+        question : "HTML program is saved using _________ extension.",
         answer: {
-            a:"<background>yellow</background>",
-            b:'<body style ="background-color:yellow;">',
-            c:"<body bg = 'yellow'>",
+            a:".htl",
+            b:'.htlm',
+            c:".html",
             d:"All of them"
 
         },
-        result:"<body bg = 'yellow'>"
+        result:".html"
     },
     {
         id : 6,
-        question :"Choose the correct HTML element to define important text",
+        question :"DOM stands for",
         answer: {
-            a:"<important>",
-            b:"<strong>",
-            c:"<i>",
-            d:"<b>"
+            a:"Document object model",
+            b:"Data object model",
+            c:"Document Oriented model",
+            d:"Data oriented model"
 
         },
-        result:"<strong>"
+        result:"Document object model"
     },
     {
         id : 7,
-        question :"Choose the correct HTML element to define emphasized text",
+        question :"ASCII stands for______",
         answer: {
-            a:"<i>",
-            b:"<em>",
-            c:"<italic>",
+            a:"American Standard Code for Informal Interchange",
+            b:"American Standard Code for Interchanging Information",
+            c:"American Standard Code for Information Interchange",
             d:"none of them"
 
         },
-        result:"<em>"
+        result:"American Standard Code for Information Interchange"
     },
     {
         id : 8,
-        question :"How can you open a link in a new tab/browser window?",
+        question :"Which of the following are attributes of Font Tag ?",
         answer: {
-            a:"<a href = 'url' target = 'new' ",
-            b:"<a href = 'url' target = '_blank' ",
-            c:"<a href = 'url' new",
+            a:"Face",
+            b:"Size ",
+            c:"Color",
             d:"all of them"
 
         },
-        result:"<a href = 'url' target = '_blank' "
+        result:"all of them"
     }
 ]
 
@@ -112,6 +112,11 @@ userEmail.innerHTML = email
 var indexcount = 0
 var htmlQ = document.getElementById("htmlQ") 
 var options = document.getElementById("options")
+var startCounter = document.getElementById("startCounter")
+var endCounter = document.getElementById("endCounter")
+endCounter.innerHTML = questions.length
+
+
 
 function question(){
 // console.log(questions[indexcount]);
@@ -119,19 +124,42 @@ htmlQ.innerHTML = questions[indexcount].question
 options.innerHTML = ''
 for(var key in questions[indexcount].answer){
     options.innerHTML += `<li> ${questions[indexcount].answer[key]}`
-}
-indexcount ++
-
-
+ 
 }
 
 
+}
+
+var parentButton = document.getElementById("parentButton")
 
 
+function nextQuestion(btn){
+    if(indexcount < questions.length-1){
+        indexcount++
+        startCounter.innerHTML ++
+        
+    }else{
+        btn.className = "hidden"
+        var pBtn = document.createElement("button")
+        pBtn.innerHTML = "Previous Question"
+        pBtn.style.backgroundColor = "#00416A"
+        pBtn.style.height = "7vh"
+        pBtn.style.fontSize = "20px"
+        pBtn.style.color = "white"
+        pBtn.setAttribute("onClick","previousQuestion()")
+        parentButton.appendChild(pBtn)
+        console.log(pBtn);
+    }
+    question()
+}
 
 
-
-
+function previousQuestion(){
+    indexcount--
+    startCounter.innerHTML -- 
+    parentButton.firstElementChild.className = "show"
+    parentButton.lastElementChild.className = "hidden"
+}
 
 
 
