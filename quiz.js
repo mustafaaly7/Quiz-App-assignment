@@ -140,26 +140,26 @@ function nextQuestion(btn){
         
     }else{
         btn.className = "hidden"
-        var pBtn = document.createElement("button")
-        pBtn.innerHTML = "Previous Question"
-        pBtn.style.backgroundColor = "#00416A"
-        pBtn.style.height = "7vh"
-        pBtn.style.fontSize = "20px"
-        pBtn.style.color = "white"
-        pBtn.setAttribute("onClick","previousQuestion()")
-        parentButton.appendChild(pBtn)
-        console.log(pBtn);
+        // var pBtn = document.createElement("button")
+        // pBtn.innerHTML = "Previous Question"
+        // pBtn.style.backgroundColor = "#00416A"
+        // pBtn.style.height = "7vh"
+        // pBtn.style.fontSize = "20px"
+        // pBtn.style.color = "white"
+        // pBtn.setAttribute("onClick","previousQuestion()")
+        // parentButton.appendChild(pBtn)
+        // console.log(pBtn);
     }
     question()
 }
 
 
-function previousQuestion(){
-    indexcount--
-    startCounter.innerHTML -- 
-    parentButton.firstElementChild.className = "show"
-    parentButton.lastElementChild.className = "hidden"
-}
+// function previousQuestion(){
+//     indexcount--
+//     startCounter.innerHTML -- 
+//     parentButton.firstElementChild.className = "show"
+//     parentButton.lastElementChild.className = "hidden"
+// }
 
 
 

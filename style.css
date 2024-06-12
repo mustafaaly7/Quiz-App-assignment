@@ -71,10 +71,18 @@ text-align: center;
     width: 80%;
     height: 8vh;
     margin: 0px auto;
+    
 }
-
+/* .mainContent h1{
+    text-align: center;
+    font-size: 4em;
+} */
+ .heading{
+    text-align: center;
+    font-size: 2em;
+ }
 .header{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex; 
     /* flex-direction: column; */
     justify-content: space-between;
@@ -100,7 +108,7 @@ list-style-type: disc;
 
 .footer{
     font-size: 2em;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     justify-content: space-between;
     color: black;
@@ -111,5 +119,8 @@ list-style-type: disc;
     font-size: 20px;
     color: white;
 }
-
+.mainContent hr{
+    /* color: black; */
+    border: 2px solid black;
+}
 
