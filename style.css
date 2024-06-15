@@ -124,3 +124,27 @@ list-style-type: disc;
     border: 2px solid black;
 }
 
+button:hover{
+    background-color:#015387 ;
+    cursor: pointer;
+}
+#startQuiz button:hover{
+    background-color:#015387 ;
+    /* background-color:#014b79 ; */
+    cursor: pointer;
+}
+
+#parentButton button:hover{
+    background-color:#015387 ;
+    cursor: pointer;
+
+}
+#htmlAnswer{
+    margin: 10px 10px 10px 17px;
+}
+#options li{
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 8px;
+    margin-bottom: 10px;
+}
