@@ -80,6 +80,7 @@ text-align: center;
  .heading{
     text-align: center;
     font-size: 2em;
+    color: lightyellow;
  }
 .header{
     /* border: 1px solid red; */
