@@ -35,7 +35,7 @@ var questions =[
             d:"None"
 
         },
-        result:"<h1>"
+        result:"XML is used for exchanging data, HTML is not"
     },
     {
         id : 4,
@@ -116,15 +116,16 @@ var startCounter = document.getElementById("startCounter")
 var endCounter = document.getElementById("endCounter")
 endCounter.innerHTML = questions.length
 
-
+var nextBtn = document.getElementById("nextBtn")
 
 function question(){
 // console.log(questions[indexcount]);
 htmlQ.innerHTML = questions[indexcount].question
 options.innerHTML = ''
+
 for(var key in questions[indexcount].answer){
-    options.innerHTML += `<li> ${questions[indexcount].answer[key]}`
- 
+    var option = questions[indexcount].answer[key] 
+    options.innerHTML += `<li onclick = "checkAnswer(this)">${option}`
 }
 
 
@@ -138,8 +139,12 @@ function nextQuestion(btn){
         indexcount++
         startCounter.innerHTML ++
         
-    }else{
-        btn.className = "hidden"
+    }
+    if(indexcount == questions.length-1){
+        // btn.className = "hidden"
+    nextBtn.innerHTML = "Check Result"
+    nextBtn.setAttribute("onclick" , "showResult()")
+
         // var pBtn = document.createElement("button")
         // pBtn.innerHTML = "Previous Question"
         // pBtn.style.backgroundColor = "#00416A"
@@ -150,6 +155,7 @@ function nextQuestion(btn){
         // parentButton.appendChild(pBtn)
         // console.log(pBtn);
     }
+    nextBtn.className = "hidden"
     question()
 }
 
@@ -160,12 +166,31 @@ function nextQuestion(btn){
 //     parentButton.firstElementChild.className = "show"
 //     parentButton.lastElementChild.className = "hidden"
 // }
+var correctAnswer = 0;
+var wrongAnswer = 0;
+
+function checkAnswer(ele){
+    // console.log(ele.innerHTML);
+    if(ele.innerHTML == questions[indexcount].result ){
+        ele.style.backgroundColor = "green"
+        nextBtn.className = "show"
+        correctAnswer ++
+        ele.style.cursor = "no-drop"
+
+    }else{
+        ele.style.backgroundColor = "red"
+        nextBtn.className = "show"
+        wrongAnswer ++
+        ele.style.cursor = "no-drop"
+
+    }
+}
 
 
 
-
-
-
+function showResult(){
+    console.log(correctAnswer , wrongAnswer);
+}
 
 
 
