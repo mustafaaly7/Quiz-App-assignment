@@ -176,7 +176,9 @@ function question() {
 }
 
 var parentButton = document.getElementById("parentButton")
-
+var resultBtn = document.getElementById("resultBtn")
+var correctAnswer = 0 ;
+var wrongAnswer = 0;
 
 function nextQuestion(btn) {
     if (indexcount < questions.length - 1) {
@@ -186,9 +188,8 @@ function nextQuestion(btn) {
     }
     if (indexcount == questions.length - 1) {
         // btn.className = "hidden"
-        nextBtn.innerHTML = "Check Result"
-        nextBtn.setAttribute("onclick", "showResult()")
-
+        resultBtn.className = "show"
+        // nextBtn.className = "hidden"
         // var pBtn = document.createElement("button")
         // pBtn.innerHTML = "Previous Question"
         // pBtn.style.backgroundColor = "#00416A"
@@ -210,13 +211,14 @@ function nextQuestion(btn) {
 //     parentButton.firstElementChild.className = "show"
 //     parentButton.lastElementChild.className = "hidden"
 // }
-var correctAnswer = 0;
-var wrongAnswer = 0;
 
-var correct = document.getElementById("correct")
-var wrong = document.getElementById("wrong")
-correct.innerHTML = correctAnswer
-wrong.innerHTML = wrongAnswer
+
+
+
+// var correct = document.getElementById("correct")
+// var wrong = document.getElementById("wrong")
+// correct.innerHTML = correctAnswer
+// wrong.innerHTML = wrongAnswer
 
 function checkAnswer(ele) {
     var liOptions = options.getElementsByTagName("li")
@@ -237,11 +239,13 @@ function checkAnswer(ele) {
     if (check) {
         // console.log("hello mf");
         correctAnswer++;
+
         ele.style.backgroundColor = "green"
     } else {
         // console.log("fuckk off");
         ele.style.backgroundColor = "darkred"
         wrongAnswer++
+
         for (var li of liOptions) {
             if (li.innerHTML === questions[indexcount].result) {
                 li.style.backgroundColor = "green"
@@ -257,13 +261,10 @@ function checkAnswer(ele) {
     nextBtn.className = "show"
 }
 
+// localStorage.setItem("correctAnswer" , correctAnswer)
+// localStorage.setItem("wrongAnswer", wrongAnswer)
 
-var Result = document.getElementById("Result")
-function showResult() {
-    // console.log(correctAnswer, wrongAnswer);
-    // main.className = "hidden"
-    // Result.className = "show"
-}
-
+console.log(correctAnswer );
+console.log(wrongAnswer);
 
 

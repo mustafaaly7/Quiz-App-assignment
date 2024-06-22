@@ -29,7 +29,7 @@ function submit() {
     }
     //storing data in google database cuz page refresh krne pr var initial state pr ajatay hain dynamically save nh hote ye page refresh hone pr bh google browser say nh jaiga 
     // syntax
-    localStorage.setItem("name", inputName.value) // localstorage.setitem aka save item ("key name " , property)
+    localStorage.setItem("name", inputName.value) // localstorage.set item aka save item ("key name " , property)
     localStorage.setItem("email", email.value)
 
     login.className = "hidden"
